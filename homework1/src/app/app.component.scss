@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  color: lightblue;
+  min-height: 11vh;
+  // background-color: rgb(166, 228, 188, 0.2);
+}
+
+h1 {
+  width: 300px;
+  text-align: center;
+
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+
+  height: 89vh;
+}

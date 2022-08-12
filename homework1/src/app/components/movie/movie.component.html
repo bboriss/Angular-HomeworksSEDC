@@ -1,0 +1,12 @@
+<div
+  [ngStyle]="{
+    display: 'flex',
+    'flex-direction': 'column',
+    'align-items': 'center'
+  }"
+>
+  <p *ngIf="hideButton">
+    <strong>💥{{ movieTitle }}💥</strong>
+  </p>
+  <button *ngIf="!hideButton" (click)="onShowMovie()">Reveal</button>
+</div>
