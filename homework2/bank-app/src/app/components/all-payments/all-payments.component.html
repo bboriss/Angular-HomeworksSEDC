@@ -1,0 +1,37 @@
+<section *ngIf="!!payments.length; else elseBlock" class="container">
+  <div>
+    <h1>Payments List</h1>
+  </div>
+
+  <div class="list">
+    <ul>
+      <li
+        *ngFor="let payment of payments"
+        class="list_item"
+        [ngClass]="
+          payment.action === 'income' ? 'background_green' : 'background_red'
+        "
+        appToggleDetails
+      >
+        <div class="main_info">
+          <span
+            ><strong>{{ payment.name }}</strong></span
+          >
+          <div class="button_toggler">Show Details ⬇</div>
+        </div>
+        <div class="payment_details hide">
+          <p>Amount: {{ payment.value | currency: "EUR" }}</p>
+          <p>Time: {{ payment.time | date: "medium" }}</p>
+          <p>{{ payment.action | titlecase }}</p>
+          <button class="button" (click)="onRemove(payment)">Remove</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<ng-template #elseBlock
+  ><section class="container">
+    <h1>You have no incomes and outcomes!</h1>
+  </section></ng-template
+>

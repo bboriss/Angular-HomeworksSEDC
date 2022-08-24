@@ -1,0 +1,24 @@
+<header>
+  <div class="title">
+    <h1>💰 Savings Tracker 💰</h1>
+  </div>
+  <div class="header__right">
+    <h2>Total Savings: {{ sum }}</h2>
+    <nav>
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >All Payments</a
+          >
+        </li>
+        <li><a routerLink="/incomes" routerLinkActive="active">Incomes</a></li>
+        <li>
+          <a routerLink="/outcomes" routerLinkActive="active">Outcomes</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
