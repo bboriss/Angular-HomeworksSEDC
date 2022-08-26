@@ -1,0 +1,23 @@
+<header>
+  <div class="title">
+    <h1>👩‍🍳 MyCookBook 👨‍🍳</h1>
+  </div>
+  <div class="header__right">
+    <nav>
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li><a routerLink="/recipes" routerLinkActive="active">Recipes</a></li>
+        <li>
+          <a routerLink="/add-recipe" routerLinkActive="active">Add Recipe</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

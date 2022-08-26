@@ -1,0 +1,37 @@
+<section *ngIf="!!recipes.length; else elseBlock" class="container">
+  <div>
+    <h1>All Recipes</h1>
+  </div>
+
+  <div class="card_container">
+    <div *ngFor="let recipe of recipes" class="container_item">
+      <div class="name">
+        <span
+          ><strong
+            ><em>{{ recipe.name }}</em></strong
+          ></span
+        >
+      </div>
+
+      <p><strong>Description:</strong> {{ recipe.description }}</p>
+      <p>
+        <strong><span>Ingredients:</span></strong>
+
+        <span>
+          {{ recipe.ingredients }}
+        </span>
+      </p>
+      <div class="buttonContainer">
+        <button class="button" [routerLink]="'/recipe-details/' + recipe.id">
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #elseBlock
+  ><section class="container">
+    <h1>You have no incomes and outcomes!</h1>
+  </section></ng-template
+>

@@ -1,0 +1,24 @@
+.container {
+  padding: 30px;
+}
+
+form {
+  background-color: #b27441;
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #ecf0f1;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 0;
+
+  label {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+}
