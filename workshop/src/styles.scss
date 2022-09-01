@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(120deg, white, rgb(210, 126, 35));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(200, 132, 90);
+  min-height: 10vh;
+  border-bottom: rgb(159, 39, 39) solid 2px;
+
+  .title {
+    margin: 15px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 15px;
+        padding: 10px;
+        font-size: 20px;
+
+        a {
+          text-decoration: none;
+          font-weight: 900;
+          padding: 5px;
+          color: #f0f0f0;
+          cursor: pointer;
+        }
+
+        :hover {
+          color: #f0f0f0;
+        }
+
+        .active {
+          background-color: #a84713;
+          padding: 12px;
+          border-radius: 4px;
+          color: #f0f0f0;
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 81vh;
+}
+
+// .container {
+//   background-color: transparent;
+//   padding: 30px;
+
+//   h1 {
+//     text-align: center;
+//   }
+// }
+
+footer {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9vh;
+  width: 100%;
+  background-color: rgb(200, 132, 90);
+  color: #f0f0f0;
+  gap: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.button {
+  align-items: center;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #a84713;
+  color: #ffffff;
+}
+
+.btn {
+  margin-top: 16px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgb(248, 144, 24);
+  font-weight: 800;
+  border-radius: 8px;
+  color: white;
+
+  &:disabled {
+    background-color: rgb(251, 209, 163);
+    color: rgb(181, 135, 89);
+  }
+}

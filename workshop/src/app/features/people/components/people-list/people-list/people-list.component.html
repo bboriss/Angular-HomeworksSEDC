@@ -1,0 +1,16 @@
+<section class="container">
+  <div>
+    <h1>People List</h1>
+  </div>
+
+  <div class="list__content">
+    <ul>
+      <li
+        (click)="onPeopleClick(people)"
+        *ngFor="let people of peopleObs$ | async"
+        class="list__item"
+        [routerLink]="'/people/details/' + people"
+      ></li>
+    </ul>
+  </div>
+</section>
